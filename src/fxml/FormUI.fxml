@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="571.0" prefWidth="982.0" styleClass="mainFxmlClass" stylesheets="@../css/formui.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InfoUIController">
+   <children>
+      <Pane layoutX="64.0" layoutY="70.0" prefHeight="364.0" prefWidth="317.0" styleClass="pane">
+         <children>
+            <TextField fx:id="txtid" layoutX="105.0" layoutY="39.0" prefHeight="31.0" prefWidth="190.0" />
+            <TextField fx:id="txtname" layoutX="105.0" layoutY="85.0" prefHeight="31.0" prefWidth="190.0" />
+            <TextField fx:id="txtamount" layoutX="105.0" layoutY="227.0" prefHeight="31.0" prefWidth="190.0" />
+            <TextField fx:id="txtdis" layoutX="105.0" layoutY="179.0" prefHeight="31.0" prefWidth="190.0" />
+            <TextField fx:id="txtcate" layoutX="105.0" layoutY="275.0" prefHeight="31.0" prefWidth="190.0" />
+            <TextField fx:id="txtprice" layoutX="105.0" layoutY="131.0" prefHeight="31.0" prefWidth="190.0" />
+            <Label layoutX="13.0" layoutY="39.0" prefHeight="31.0" prefWidth="80.0" text="ID :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="227.0" prefHeight="31.0" prefWidth="80.0" text="Amount :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="6.0" layoutY="179.0" prefHeight="31.0" prefWidth="80.0" text="Discription :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="131.0" prefHeight="31.0" prefWidth="80.0" text="Price :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="85.0" prefHeight="31.0" prefWidth="80.0" text="Name :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="275.0" prefHeight="31.0" prefWidth="80.0" text="Catetory :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutX="381.0" layoutY="14.0" prefHeight="37.0" prefWidth="240.0" styleClass="labelMain" text="PRODUCT MANAGE">
+         <font>
+            <Font name="Arial Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnnew" layoutX="91.0" layoutY="447.0" mnemonicParsing="false" onAction="#NewAction" prefHeight="31.0" prefWidth="90.0" styleClass="btn" text="NEW">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btndelete" layoutX="246.0" layoutY="497.0" mnemonicParsing="false" onAction="#DeleteAction" prefHeight="31.0" prefWidth="90.0" styleClass="btn" text="DELETE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnupdate" layoutX="91.0" layoutY="497.0" mnemonicParsing="false" onAction="#UpdateAction" prefHeight="31.0" prefWidth="90.0" styleClass="btn" text="UPDATE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnadd" layoutX="246.0" layoutY="447.0" mnemonicParsing="false" onAction="#SaveAction" prefHeight="31.0" prefWidth="90.0" styleClass="btn" text="ADD">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblpro" layoutX="436.0" layoutY="70.0" prefHeight="385.0" prefWidth="536.0" style="-fx-border-radius: 30;">
+        <columns>
+          <TableColumn fx:id="tblid" prefWidth="49.333343505859375" text="ID" />
+            <TableColumn fx:id="tblname" prefWidth="125.33328247070312" text="Name" />
+            <TableColumn fx:id="tblprice" prefWidth="68.00006103515625" text="Price" />
+            <TableColumn fx:id="tbldis" prefWidth="120.6666259765625" text="Discription" />
+            <TableColumn fx:id="tblamount" prefWidth="79.33331298828125" text="Amount" />
+            <TableColumn fx:id="tblcate" prefWidth="93.33331298828125" text="Catetory" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
